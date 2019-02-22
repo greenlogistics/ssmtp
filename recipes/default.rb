@@ -27,7 +27,7 @@ end
 
 case node['ssmtp']['credential_method']
 when 'data_bag'
-  data_bag = data_bag_item('mail', 'ssmtp')
+  data_bag = data_bag_item('secrets', 'ssmtp')
   username = data_bag['username']
   password = data_bag['password']
 when 'plain'
